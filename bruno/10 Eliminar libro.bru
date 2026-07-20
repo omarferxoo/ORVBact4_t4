@@ -1,0 +1,19 @@
+meta {
+  name: 10 Eliminar libro
+  type: http
+  seq: 10
+}
+
+delete {
+  url: {{base_url}}/api/libros/{{libro_id}}
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+headers {
+  Accept: application/json
+}

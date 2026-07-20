@@ -1,0 +1,31 @@
+meta {
+  name: 08 Validacion 422
+  type: http
+  seq: 8
+}
+
+post {
+  url: {{base_url}}/api/libros
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+headers {
+  Accept: application/json
+  Content-Type: application/json
+}
+
+body:json {
+  {
+    "titulo": "",
+    "autor": "",
+    "genero": "Backend",
+    "anio_publicacion": 1200,
+    "paginas": 0,
+    "disponible": true
+  }
+}

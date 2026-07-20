@@ -1,0 +1,32 @@
+meta {
+  name: 07 Crear libro
+  type: http
+  seq: 7
+}
+
+post {
+  url: {{base_url}}/api/libros
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+headers {
+  Accept: application/json
+  Content-Type: application/json
+}
+
+body:json {
+  {
+    "titulo": "API REST con Laravel",
+    "autor": "Omar Valencia",
+    "genero": "Backend",
+    "anio_publicacion": 2026,
+    "paginas": 250,
+    "disponible": true,
+    "descripcion": "Libro creado desde Bruno para probar el endpoint POST."
+  }
+}

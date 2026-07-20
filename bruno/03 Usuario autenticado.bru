@@ -1,0 +1,19 @@
+meta {
+  name: 03 Usuario autenticado
+  type: http
+  seq: 3
+}
+
+get {
+  url: {{base_url}}/api/user
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+headers {
+  Accept: application/json
+}

@@ -1,0 +1,32 @@
+meta {
+  name: 09 Actualizar libro
+  type: http
+  seq: 9
+}
+
+put {
+  url: {{base_url}}/api/libros/{{libro_id}}
+  body: json
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+headers {
+  Accept: application/json
+  Content-Type: application/json
+}
+
+body:json {
+  {
+    "titulo": "API REST con Laravel actualizado",
+    "autor": "Omar Valencia",
+    "genero": "Backend",
+    "anio_publicacion": 2026,
+    "paginas": 300,
+    "disponible": false,
+    "descripcion": "Libro actualizado desde Bruno con metodo PUT."
+  }
+}

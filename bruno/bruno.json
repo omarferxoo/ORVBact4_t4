@@ -1,0 +1,9 @@
+{
+  "version": "1",
+  "name": "ORVBact4t4 API",
+  "type": "collection",
+  "ignore": [
+    "node_modules",
+    ".git"
+  ]
+}

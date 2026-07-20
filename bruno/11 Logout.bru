@@ -1,0 +1,19 @@
+meta {
+  name: 11 Logout
+  type: http
+  seq: 11
+}
+
+post {
+  url: {{base_url}}/api/logout
+  body: none
+  auth: bearer
+}
+
+auth:bearer {
+  token: {{token}}
+}
+
+headers {
+  Accept: application/json
+}
