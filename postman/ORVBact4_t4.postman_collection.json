@@ -1,0 +1,401 @@
+﻿{
+  "info": {
+    "_postman_id": "a8ff56ef-5521-48fa-9eb8-6d49d6b08612",
+    "name": "Pruebas",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "56495919",
+    "_collection_link": "https://go.postman.co/collection/56495919-a8ff56ef-5521-48fa-9eb8-6d49d6b08612?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "http://168.231.75.27/ORVBact4t4/api/login",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "{{token}}",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"email\": \"omar.api+20260719191501@example.com\",\r\n  \"password\": \"password123\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://168.231.75.27/ORVBact4t4/api/login",
+          "protocol": "http",
+          "host": [
+            "168",
+            "231",
+            "75",
+            "27"
+          ],
+          "path": [
+            "ORVBact4t4",
+            "api",
+            "login"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "http://168.231.75.27/ORVBact4t4/api/libros",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "{{token}}",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://168.231.75.27/ORVBact4t4/api/libros",
+          "protocol": "http",
+          "host": [
+            "168",
+            "231",
+            "75",
+            "27"
+          ],
+          "path": [
+            "ORVBact4t4",
+            "api",
+            "libros"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "http://168.231.75.27/ORVBact4t4/api/libros/24",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "{{token}}",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://168.231.75.27/ORVBact4t4/api/libros/13",
+          "protocol": "http",
+          "host": [
+            "168",
+            "231",
+            "75",
+            "27"
+          ],
+          "path": [
+            "ORVBact4t4",
+            "api",
+            "libros",
+            "13"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "http://168.231.75.27/ORVBact4t4/api/libros",
+      "protocolProfileBehavior": {
+        "disabledSystemHeaders": {}
+      },
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "{{token}}",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json",
+            "type": "text",
+            "disabled": true
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"titulo\": \"Laravel API REST\",\r\n  \"autor\": \"Omar Valencia\",\r\n  \"genero\": \"Programacion\",\r\n  \"anio_publicacion\": 2026,\r\n  \"paginas\": 180,\r\n  \"disponible\": true,\r\n  \"descripcion\": \"Libro creado desde Postman para probar el endpoint POST.\"\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://168.231.75.27/ORVBact4t4/api/libros",
+          "protocol": "http",
+          "host": [
+            "168",
+            "231",
+            "75",
+            "27"
+          ],
+          "path": [
+            "ORVBact4t4",
+            "api",
+            "libros"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "http://168.231.75.27/ORVBact4t4/api/libros/24",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "{{token}}",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "PATCH",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"titulo\": \"Laravel API REST actualizado\",\r\n  \"paginas\": 220,\r\n  \"disponible\": false\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://168.231.75.27/ORVBact4t4/api/libros/13",
+          "protocol": "http",
+          "host": [
+            "168",
+            "231",
+            "75",
+            "27"
+          ],
+          "path": [
+            "ORVBact4t4",
+            "api",
+            "libros",
+            "13"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "http://168.231.75.27/ORVBact4t4/api/libros",
+      "protocolProfileBehavior": {
+        "disabledSystemHeaders": {
+          "accept": true
+        }
+      },
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "{{token}}",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\r\n  \"titulo\": \"\",\r\n  \"autor\": \"\",\r\n  \"genero\": \"\",\r\n  \"anio_publicacion\": 1600,\r\n  \"paginas\": 0\r\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://168.231.75.27/ORVBact4t4/api/libros",
+          "protocol": "http",
+          "host": [
+            "168",
+            "231",
+            "75",
+            "27"
+          ],
+          "path": [
+            "ORVBact4t4",
+            "api",
+            "libros"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "http://168.231.75.27/ORVBact4t4/api/libros/24",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "{{token}}",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "DELETE",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://168.231.75.27/ORVBact4t4/api/libros/13",
+          "protocol": "http",
+          "host": [
+            "168",
+            "231",
+            "75",
+            "27"
+          ],
+          "path": [
+            "ORVBact4t4",
+            "api",
+            "libros",
+            "13"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "http://168.231.75.27/ORVBact4t4/api/logout",
+      "request": {
+        "auth": {
+          "type": "bearer",
+          "bearer": [
+            {
+              "key": "token",
+              "value": "{{token}}",
+              "type": "string"
+            }
+          ]
+        },
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "http://168.231.75.27/ORVBact4t4/api/logout",
+          "protocol": "http",
+          "host": [
+            "168",
+            "231",
+            "75",
+            "27"
+          ],
+          "path": [
+            "ORVBact4t4",
+            "api",
+            "logout"
+          ]
+        }
+      },
+      "response": []
+    }
+  ],
+  "auth": {
+    "type": "bearer"
+  },
+  "event": [
+    {
+      "listen": "prerequest",
+      "script": {
+        "type": "text/javascript",
+        "packages": {},
+        "requests": {},
+        "exec": [
+          ""
+        ]
+      }
+    },
+    {
+      "listen": "test",
+      "script": {
+        "type": "text/javascript",
+        "packages": {},
+        "requests": {},
+        "exec": [
+          ""
+        ]
+      }
+    }
+  ],
+  "variable": [
+    {
+      "key": "token",
+      "value": ""
+    }
+  ]
+}
+
+
+
